@@ -1,0 +1,15 @@
+{
+    "workbench.colorTheme": "Night Owl (No Italics)",
+    "omnisharp.useGlobalMono": "always",
+    "gitlens.codeLens.enabled": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": true,
+    "editor.guides.bracketPairsHorizontal": false,
+    "editor.guides.highlightActiveBracketPair": true,
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "JetBrains Mono",
+    "vim.smartRelativeLine": true,
+    "files.autoSave": "onFocusChange",
+    "editor.inlineSuggest.enabled": true
+}

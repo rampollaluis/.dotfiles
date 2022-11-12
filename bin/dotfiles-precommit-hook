@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# pre-commit hook for dotfiles repo that is copied into the .git/hooks directory
+dotfiles_dir="$HOME"/.dotfiles
+
+# run output-vscode-extensions script to update file and stage the it
+if [ "$PWD" = "$dotfiles_dir" ]; then
+    "$dotfiles_dir"/bin/output-vscode-extensions
+    git add vscode/extensions
+fi

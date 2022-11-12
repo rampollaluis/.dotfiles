@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# get all vscode extensions and output to file in root project folder
+echo "Saving VSCode extensions..."
+code --list-extensions > "$HOME"/.dotfiles/vscode/extensions
