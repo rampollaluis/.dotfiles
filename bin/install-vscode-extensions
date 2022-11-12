@@ -1,0 +1,9 @@
+#!/bin/sh
+
+#  read file $HOME/.dotfiles/vscode/extensions line by line
+#  for each non-empty line, run: code --install-extension $line
+while IFS= read -r line; do
+    if [ -n "$line" ]; then
+        code --install-extension "$line"
+    fi
+done < "$HOME/.dotfiles/vscode/extensions"
