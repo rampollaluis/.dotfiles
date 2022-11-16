@@ -2,6 +2,8 @@
 
 setup ssh https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection 
 
+after brew: setup ohmyzsh sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 ## Steps to bootstrap a new Mac
 
 1. Install Apple's Command Line Tools, which are prerequisites for Git and Homebrew.
