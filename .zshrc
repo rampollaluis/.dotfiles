@@ -95,7 +95,7 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias brewfile="brew bundle dump --force --file=$HOME/.dotfiles/Brewfile"
+
+# Banners/Quotes/motd
+fortune | cowsay  -f "$(ls /opt/homebrew/Cellar/cowsay/3.04_1/share/cows | sort -R | head -1)"
