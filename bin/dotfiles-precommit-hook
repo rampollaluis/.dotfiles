@@ -7,4 +7,7 @@ dotfiles_dir="$HOME"/.dotfiles
 if [ "$PWD" = "$dotfiles_dir" ]; then
     "$dotfiles_dir"/bin/output-vscode-extensions
     git add vscode/extensions
+    
+    brew bundle dump --force --file=$HOME/.dotfiles/Brewfile
+    git add Brewfile
 fi
