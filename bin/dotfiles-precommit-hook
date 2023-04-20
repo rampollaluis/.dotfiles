@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # pre-commit hook for dotfiles repo that is copied into the .git/hooks directory
 dotfiles_dir="$HOME"/.dotfiles
