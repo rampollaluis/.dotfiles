@@ -1,0 +1,29 @@
+#!/bin/sh
+
+# Set the number of days between automatic upgrades
+DAYS_BETWEEN_RUNS=30
+
+# Get the date the script was last run from a file
+if [ -f ~/bin/helpers/.brew-upgrade-last-run ]; then
+  LAST_RUN=$(cat ~/bin/helpers/.brew-upgrade-last-run)
+else
+  LAST_RUN=$(date -v -${DAYS_BETWEEN_RUNS}d +%s)
+fi
+
+# Get the current date
+NOW=$(date +%s)
+
+# Check if enough time has elapsed since the last script run
+if [ $(($NOW - $LAST_RUN)) -ge $(($DAYS_BETWEEN_RUNS * 24 * 60 * 60)) ]; then
+  echo "It's been more than 30 days since last brew update/upgrade ran"
+
+  read -p "Would you like to upgrade Homebrew and packages? (y/n) " choice
+  case "$choice" in
+    y|Y ) brew update && brew upgrade;;
+    n|N ) echo "Skipping upgrades...";;
+    * ) echo "Invalid choice. Skipping upgrades...";;
+  esac
+
+  # Update the date the script was last run in the file
+  echo $NOW > ~/bin/helpers/.brew-upgrade-last-run
+fi
