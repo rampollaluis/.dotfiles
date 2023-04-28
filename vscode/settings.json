@@ -11,5 +11,8 @@
     "editor.fontFamily": "JetBrains Mono",
     "vim.smartRelativeLine": true,
     "files.autoSave": "onFocusChange",
-    "editor.inlineSuggest.enabled": true
+    "editor.inlineSuggest.enabled": true,
+    "[python]": {
+        "editor.formatOnType": true
+    }
 }
