@@ -1,0 +1,11 @@
+---
+- hosts: all
+  tasks:
+
+    - name: Brew bundle Brewfile
+      command: brew bundle --file Brewfile
+      register: output
+
+    - name: brew bundle output
+      debug: 
+        var: output.stdout_lines

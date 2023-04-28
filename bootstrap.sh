@@ -11,7 +11,8 @@ chmod +x ~/.dotfiles/bin/dotfiles-precommit-hook
 chmod -c +x ~/.dotfiles/bin/install-vscode-extensions
 
 # Make a copy of the pre-commit hook file on the .git/hooks directory
-cp ~/.dotfiles/bin/dotfiles-precommit-hook ~/.dotfiles/.git/hooks/pre-commit
+# idk if this is actually needed or cloning the repo already does it
+# cp ~/.dotfiles/bin/dotfiles-precommit-hook ~/.dotfiles/.git/hooks/pre-commit
 
 # brew install brewfile
 # mas install all in brewfile

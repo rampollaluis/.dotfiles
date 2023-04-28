@@ -1,0 +1,154 @@
+---
+- hosts: all
+  tasks:
+
+    - name: Close Preferences App
+      command: osascript -e 'tell application "System Preferences" to quit'
+
+    - name: Mission Control - Automatically rearrange Spaces based on most recent used - Off
+      community.general.osx_defaults:
+        domain: com.apple.dock
+        key: mru-spaces
+        type: boolean
+        value: false
+
+    - name: Dock - Show recents - Off
+      community.general.osx_defaults:
+        domain: com.apple.dock
+        key: show-recents
+        type: boolean
+        value: false
+
+    - name: Dock - tilesize - 56
+      community.general.osx_defaults:
+        domain: com.apple.dock
+        key: tilesize
+        type: float
+        value: 56
+
+    - name: Dock - Minimize windows into their application's icon - On
+      community.general.osx_defaults:
+        domain: com.apple.dock
+        key: minimize-to-application
+        type: boolean
+        value: true
+
+    - name: Screenshots - Default save location - ~/Documents/
+      community.general.osx_defaults:
+        domain: com.apple.screencapture
+        key: location
+        type: string
+        value: ~/Documents/
+
+    - name: Accessibility - Hot Cornes top left - Off
+      community.general.osx_defaults:
+        domain: com.apple.dock
+        key: wvous-tl-corner
+        type: int
+        value: 0
+
+    - name: Accessibility - Hot Cornes top right - Off
+      community.general.osx_defaults:
+        domain: com.apple.dock
+        key: wvous-tr-corner
+        type: int
+        value: 0
+
+    - name: Accessibility - Hot Cornes bottom left - Off
+      community.general.osx_defaults:
+        domain: com.apple.dock
+        key: wvous-bl-corner
+        type: int
+        value: 0
+          
+    - name: Accessibility - Hot Cornes bottom right - Off
+      community.general.osx_defaults:
+        domain: com.apple.dock
+        key: wvous-br-corner
+        type: int
+        value: 0
+
+    - name: Finder - Show path bar - On
+      community.general.osx_defaults:
+        domain: com.apple.finder
+        key: ShowPathbar
+        type: boolean
+        value: true
+
+    - name: Finder - Show extensions - On
+      community.general.osx_defaults:
+        domain: NSGlobalDomain
+        key: AppleShowAllExtensions
+        type: boolean
+        value: true
+
+    - name: Finder - Avoid creating .DS_Store on USB volumes
+      community.general.osx_defaults:
+        domain: com.apple.desktopservices
+        key: DSDontWriteUSBStores
+        type: boolean
+        value: true
+
+    - name: Finder - Avoid creating .DS_Store on Network volumes
+      community.general.osx_defaults:
+        domain: com.apple.desktopservices
+        key: DSDontWriteNetworkStores
+        type: boolean
+        value: true
+
+    - name: Keyboard - Key repeat - 2
+      community.general.osx_defaults:
+        domain: NSGlobalDomain
+        key: KeyRepeat
+        type: int
+        value: 2
+
+    - name: Keyboard - Initial Key repeat - 15
+      community.general.osx_defaults:
+        domain: NSGlobalDomain
+        key: InitialKeyRepeat
+        type: int
+        value: 15
+
+    - name: Keyboard - Add period with double-space - Off
+      community.general.osx_defaults:
+        domain: NSGlobalDomain
+        key: NSAutomaticPeriodSubstitutionEnabled
+        type: boolean
+        value: false
+
+    - name: Keyboard - Capitalize words automatically - Off
+      community.general.osx_defaults:
+        domain: NSGlobalDomain
+        key: NSAutomaticCapitalizationEnabled
+        type: boolean
+        value: false
+
+    - name: Chrome - Navigate with trackpad swipe - Off
+      community.general.osx_defaults:
+        domain: com.google.Chrome
+        key: AppleEnableSwipeNavigateWithScrolls
+        type: boolean
+        value: false
+
+    - name: VSCode - Disable press-and-hold in favor for key repeat
+      community.general.osx_defaults:
+        domain: com.microsoft.VSCode
+        key: ApplePressAndHoldEnabled
+        type: boolean
+        value: false
+
+    - name: iTerm - Disable press-and-hold in favor for key repeat
+      community.general.osx_defaults:
+        domain: com.googlecode.iterm2
+        key: ApplePressAndHoldEnabled
+        type: boolean
+        value: false
+
+    - name: iTerm - Show prompt on quit - Off
+      community.general.osx_defaults:
+        domain: com.googlecode.iterm2
+        key: PromptOnQuit
+        type: boolean
+        value: false
+
