@@ -16,3 +16,47 @@
         - .zprofile
         - .gitconfig
 
+    - name: Find all files in dotfiles /bin folder
+      find:
+        paths: "{{ dotfiles }}/bin"
+        patterns: '*'
+        file_type: file
+      register: repo_scripts
+
+    - name: Make all repo scripts in /bin executable
+      file:
+        path: "{{ item.path }}"
+        mode: '0755'
+      loop: "{{ repo_scripts.files }}"
+
+    - name: Find all files in dotfiles /scripts folder
+      find:
+        paths: "{{ dotfiles }}/scripts"
+        patterns: '*'
+        file_type: file
+      register: user_scripts
+
+    - name: Make all user scripts in /scripts executable
+      file:
+        path: "{{ item.path }}"
+        mode: '0755'
+      loop: "{{ user_scripts.files }}"
+
+    - name: Make sure home /bin folder exists for user scripts
+      file:
+        path: "{{ home }}/bin"
+        state: directory
+
+    - name: Find all items in the scripts folder recursively
+      find:
+        paths: "{{ dotfiles }}/scripts"
+        file_type: any
+      register: items_to_symlink
+
+    - name: Create symlinks for all items
+      file:
+        src: "{{ item.path }}"
+        dest: "{{ home }}/bin/{{ item.path | regex_replace('^' + dotfiles + '/scripts', '') }}"
+        state: link
+      loop: "{{ items_to_symlink.files }}"
+
