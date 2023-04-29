@@ -1,0 +1,18 @@
+---
+- name: create symlinks
+  hosts: all
+  vars:
+    home: "{{ lookup('env', 'HOME') }}"
+    dotfiles: "{{ home }}/.dotfiles"
+  tasks:
+
+    - name: Create symlinks for home directory config files
+      file:
+        src: "{{ dotfiles }}/{{ item }}"
+        dest: "{{ home }}/{{ item }}"
+        state: link
+      loop:
+        - .zshrc
+        - .zprofile
+        - .gitconfig
+
