@@ -1,3 +1,18 @@
+Goal:
+- to have a raw sh script on a website or even a domain pointing to a github gist of a raw sh file that you can curl and will download the dotfiles repo, install brew, install ansible with brew and subsequently run all the ansible playbooks in the repo
+  - run something like curl -sSL setup.mydomain.dev | bash on a new machine and everything in the machine is setup with minimal user effort
+Current features:
+- Precommit hook so that everytime you commit to the repository a script runs that generates the Brewfile and a list of vscode extensions installed and commits these files so that these are always kept up to date
+- Ansible playbook to change macos defaults. A list of all it's doing will be added
+- Ansible playbook to install everything in Brewfile (this includes taps, casks, and even mas)
+- .zshrc, .gitconfig, and .zprofile config files
+- script that runs every time you start terminal that asks if you want to run brew upgrade if more than 30 days have passed since last time
+
+Needed:
+- playbook to link all scripts and config files
+- finish setting up nvim
+- macos Automator workflows
+- change brew upgrade script to do cd ~/.dotfiles && brew bundle dump --force && brew bundle --file Brewfile so that the brewfile is always kept up to date even if no commits to this repository are made
 # To use as starting template for future readme
 
 setup ssh https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection 
