@@ -60,3 +60,8 @@
         state: link
       loop: "{{ items_to_symlink.files }}"
 
+    - name: Symlink nvim
+      file:
+        src: "{{ dotfiles }}/nvim"
+        dest: "{{ home }}/.config/nvim"
+        state: link
