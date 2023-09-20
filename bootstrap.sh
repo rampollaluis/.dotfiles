@@ -4,6 +4,3 @@ ln -sv ~/.dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User
 
 # Make a copy of the pre-commit hook file on the .git/hooks directory
 # cp ~/.dotfiles/bin/dotfiles-precommit-hook ~/.dotfiles/.git/hooks/pre-commit
-
-# install all vscode extensions
-"$HOME"/.dotfiles/bin/install-vscode-extensions
