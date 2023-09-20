@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 
 -- file explorer
-vim.keymap.set("n", "<leader>ex", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>ex", vim.cmd.Vex)
 
 -- move selection
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -26,3 +26,5 @@ vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>Y", "\"+Y")
 
 vim.keymap.set("n", "Q", "<nop>")
+
+vim.keymap.set("n", "<leader>rt", ":let @r=input(\"Rename tag to: \")<CR>vat:'<,'>s#<.*>\\(.*\\)<\\/.*>#\\='<'.getreg('r').'>'.submatch(1).'</'.getreg('r').'>'#<CR>")
