@@ -101,3 +101,6 @@ alias brewfile="brew bundle dump --force --file=$HOME/.dotfiles/Brewfile"
 fortune | cowsay  -f "$(ls /opt/homebrew/Cellar/cowsay/3.04_1/share/cows | sort -R | head -1)"
 
 source brew-upgrade-monthly
+
+export PATH=$PATH:$HOME/go/bin
+
