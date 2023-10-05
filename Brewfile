@@ -20,7 +20,6 @@ cask "spotify"
 cask "todoist"
 cask "visual-studio-code"
 cask "vlc"
-mas "Day One", id: 1055511498
 mas "GoPro Player", id: 1460836908
 mas "iMovie", id: 408981434
 mas "Magnet", id: 441258766
