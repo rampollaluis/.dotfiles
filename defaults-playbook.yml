@@ -152,3 +152,7 @@
         type: boolean
         value: false
 
+    - name: Import magnet settings
+      ansible.builtin.command:
+        cmd: defaults import com.crowdcafe.windowmagnet magnet-settings.plist
+

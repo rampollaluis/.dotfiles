@@ -1,0 +1,23 @@
+{
+    appAlreadyLaunchedKey = 1;
+    expandWindowEastComboKey =     {
+        keyCode = 37;
+        modifierFlags = 262144;
+    };
+    expandWindowNorthComboKey =     {
+        keyCode = 40;
+        modifierFlags = 262144;
+    };
+    expandWindowSouthComboKey =     {
+        keyCode = 38;
+        modifierFlags = 262144;
+    };
+    expandWindowWestComboKey =     {
+        keyCode = 4;
+        modifierFlags = 262144;
+    };
+    launchAtLogin = 1;
+    usageCount = 2;
+    userAppBlacklist =     (
+    );
+}
