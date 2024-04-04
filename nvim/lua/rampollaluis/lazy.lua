@@ -61,6 +61,16 @@ local plugins = {
             { 'hrsh7th/cmp-path' },     -- Required
             { 'L3MON4D3/LuaSnip' },     -- Required
         }
+    },
+
+    {
+        'rmagatti/auto-session',
+        config = function()
+            require("auto-session").setup {
+                log_level = "error",
+                auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
+            }
+        end
     }
 
 }
