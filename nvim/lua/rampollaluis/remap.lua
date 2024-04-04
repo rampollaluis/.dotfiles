@@ -1,7 +1,8 @@
 vim.g.mapleader = " "
 
 -- file explorer
-vim.keymap.set("n", "<leader>ex", vim.cmd.Vex)
+vim.keymap.set("n", "<leader>ex", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>ve", vim.cmd.Vex)
 
 -- move selection
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
