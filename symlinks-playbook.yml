@@ -6,6 +6,15 @@
     dotfiles: "{{ home }}/.dotfiles"
   tasks:
 
+    - name: Delete config files if they exist
+      file:
+        path: "{{ home }}/{{ item }}"
+        state: absent
+      loop:
+        - .zshrc
+        - .zprofile
+        - .gitconfig
+
     - name: Create symlinks for home directory config files
       file:
         src: "{{ dotfiles }}/{{ item }}"
