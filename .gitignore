@@ -1,3 +1,6 @@
 packer_compiled.lua
 
 .DS_Store
+
+# contains open ai key
+Alfred.alfredpreferences/workflows/user.workflow.CC076D45-10EA-432A-9FB5-CFDF25C94210/prefs.plist

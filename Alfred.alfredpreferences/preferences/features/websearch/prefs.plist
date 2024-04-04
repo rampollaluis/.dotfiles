@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>customSites</key>
+	<dict>
+		<key>396519D0-136D-4119-B78D-09DDCAAAEC49</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>gif</string>
+			<key>spaces</key>
+			<string>-</string>
+			<key>text</key>
+			<string>Giphy</string>
+			<key>url</key>
+			<string>https://giphy.com/search/{query}</string>
+		</dict>
+		<key>41FDC75A-C69A-4445-ABFB-C8942215ACCF</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>urbandict</string>
+			<key>text</key>
+			<string>Urban Dictionary</string>
+			<key>url</key>
+			<string>https://www.urbandictionary.com/define.php?term={query}</string>
+		</dict>
+		<key>60B04C79-6A59-413B-BFB6-6E03CACF8A4D</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>man</string>
+			<key>spaces</key>
+			<string>+</string>
+			<key>text</key>
+			<string>Mandarin Dictionary</string>
+			<key>url</key>
+			<string>https://www.mdbg.net/chinese/dictionary?page=worddict&amp;wdrst=0&amp;wdqb={query}</string>
+		</dict>
+	</dict>
+	<key>onlyShowEnabledInPrefs</key>
+	<true/>
+</dict>
+</plist>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string></string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>5BBCAFE1-2275-449D-BE8A-F5D9929A380B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A4BD02C7-2E36-4A7C-89DF-57E5823C67C8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A4BD02C7-2E36-4A7C-89DF-57E5823C67C8</key>
+		<array/>
+	</dict>
+	<key>createdby</key>
+	<string></string>
+	<key>description</key>
+	<string></string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Open DnD documents</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>paths</key>
+				<array>
+					<string>~/Downloads/HSK1.02 Character Worksheet.pdf</string>
+					<string>~/Downloads/HSK 1 Workbook.pdf</string>
+				</array>
+				<key>toggle</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.launchfiles</string>
+			<key>uid</key>
+			<string>A4BD02C7-2E36-4A7C-89DF-57E5823C67C8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>dnd</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Open dnd docs</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>5BBCAFE1-2275-449D-BE8A-F5D9929A380B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>5BBCAFE1-2275-449D-BE8A-F5D9929A380B</key>
+		<dict>
+			<key>xpos</key>
+			<real>50</real>
+			<key>ypos</key>
+			<real>55</real>
+		</dict>
+		<key>A4BD02C7-2E36-4A7C-89DF-57E5823C67C8</key>
+		<dict>
+			<key>xpos</key>
+			<real>290</real>
+			<key>ypos</key>
+			<real>55</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
