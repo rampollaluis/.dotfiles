@@ -101,3 +101,5 @@ source brew-upgrade-monthly
 
 export PATH=$PATH:$HOME/go/bin
 
+cdpath=(~ ~/workspace ~/.dotfiles)
+
