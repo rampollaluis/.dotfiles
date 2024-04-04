@@ -13,15 +13,11 @@ brew "zsh"
 cask "discord"
 cask "iterm2"
 cask "mullvadvpn"
-cask "nordvpn"
-cask "notion"
 cask "scroll-reverser"
 cask "spotify"
 cask "todoist"
 cask "visual-studio-code"
 cask "vlc"
-mas "GoPro Player", id: 1460836908
-mas "iMovie", id: 408981434
 mas "Magnet", id: 441258766
 mas "The Unarchiver", id: 425424353
 mas "WhatsApp", id: 1147396723
