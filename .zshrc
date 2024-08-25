@@ -4,6 +4,15 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+export LANG="en_US.UTF-8"
+export LC_COLLATE="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+export LC_MESSAGES="en_US.UTF-8"
+export LC_MONETARY="en_US.UTF-8"
+export LC_NUMERIC="en_US.UTF-8"
+export LC_TIME="en_US.UTF-8"
+export LC_ALL=
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -103,3 +112,12 @@ export PATH=$PATH:$HOME/go/bin
 
 cdpath=(~ ~/workspace ~/.dotfiles)
 
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --zsh)"
+
+# bun completions
+[ -s "/Users/luisrampolla/.bun/_bun" ] && source "/Users/luisrampolla/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
