@@ -138,6 +138,9 @@
         type: boolean
         value: false
 
+    - name: Cursor - Disable press-and-hold in favor of key repeat
+      command: defaults write -app "Cursor" ApplePressAndHoldEnabled -bool false
+
     - name: iTerm - Disable press-and-hold in favor for key repeat
       community.general.osx_defaults:
         domain: com.googlecode.iterm2
