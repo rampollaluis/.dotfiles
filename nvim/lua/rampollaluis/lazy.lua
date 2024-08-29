@@ -71,7 +71,9 @@ local plugins = {
                 auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
             }
         end
-    }
+    },
+
+    'unblevable/quick-scope'
 
 }
 
