@@ -121,3 +121,7 @@ eval "$(fzf --zsh)"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# ask for ssh password at the start instead of after every single command that uses it
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
