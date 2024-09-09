@@ -73,7 +73,8 @@ local plugins = {
         end
     },
 
-    'unblevable/quick-scope'
+    'unblevable/quick-scope',
+    'machakann/vim-sandwich'
 
 }
 
