@@ -15,6 +15,22 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
     {
+        'angularjump',
+        dir = '~/.config/nvim/lua/angularjump', -- Path to your local plugin
+        config = function()
+            -- Set up any keybindings or commands for the plugin
+            vim.api.nvim_set_keymap('n', '<leader>ah', ":lua require'angularjump'.jump_to_html()<CR>",
+                { noremap = true, silent = true })
+            vim.api.nvim_set_keymap('n', '<leader>ac', ":lua require'angularjump'.jump_to_css()<CR>",
+                { noremap = true, silent = true })
+            vim.api.nvim_set_keymap('n', '<leader>at', ":lua require'angularjump'.jump_to_ts()<CR>",
+                { noremap = true, silent = true })
+            vim.api.nvim_set_keymap('n', '<leader>as', ":lua require'angularjump'.jump_to_spec()<CR>",
+                { noremap = true, silent = true })
+
+        end
+    },
+    {
         'nvim-telescope/telescope.nvim',
         branch = '0.1.x',
         dependencies = { 'nvim-lua/plenary.nvim' }
@@ -28,12 +44,60 @@ local plugins = {
     },
 
     {
-        'joshdick/onedark.vim',
-        name = 'onedark',
+        'norcalli/nvim-colorizer.lua',
         config = function()
-            vim.cmd('colorscheme onedark')
+            require('colorizer').setup()
         end
     },
+
+    {
+        "catppuccin/nvim",
+        name = "catppuccin",
+        priority = 1000,
+        config = function()
+            require("catppuccin").setup({
+                color_overrides = {
+                    -- Carburetor
+                    mocha = {
+                        rosewater = "#42be65", -- links in help pages
+                        flamingo = "#b3b3b3",  -- nvim: netrw version and telescope prompt > - GOOD
+                        pink = "#b0b0b0",      -- {} - GOOD
+                        mauve = "#8a8a8a",     -- py: def keyword - GOOD
+                        red = "#a5a5a5",       -- js: builtin variables (console, window, JSON, etc.) - GOOD
+                        maroon = "#d1d1d1",    -- py: parameters - GOOD
+                        peach = "#b0b0b0",     -- lua: require() - GOOD
+                        yellow = "#e0be36",    -- py: class names(?) js: constructors? nvim: warnings - GOOD
+                        green = "#6b6b6b",     -- strings GOOD
+                        teal = "#8b8b8b",      -- html: attributes - GOOD
+                        sky = "#42be65",       -- py, js: operators - GOOD
+                        sapphire = "#9c9c9c",  -- py: constructors? - GOOD
+                        blue = "#9a9a9a",      -- py, js: function calls - GOOD
+                        lavender = "#f4f4f4",  -- uknown
+                        text = "#f4f4f4",      -- uknown
+                        subtext1 = "#ff0000",  -- unknown. original: e0e0e0
+                        subtext0 = "#ff0000",  -- unknown. original: c6c6c6
+                        overlay2 = "#3a3a3a",  -- py, js: comments, ()[].:= - GOOD
+                        overlay1 = "#ff0000",  -- unknown. original: 5e5e5e
+                        overlay0 = "#6f6f6f",  -- nvim: counter in telescope ex: 230/235 - GOOD
+                        surface2 = "#ff0000",  -- unknown. original: 525252
+                        surface1 = "#393939",  -- nvim: line numbers - GOOD
+                        surface0 = "#262626",  -- nvim: highlight line in telescope - GOOD
+                        base = "#1c1c1c",      -- background - GOOD
+                        mantle = "#0b0b0b",    -- vim status bar - GOOD
+                        crust = "#ff0000"      -- unknown. original: 000000
+                    },
+                }
+            })
+        end
+    },
+
+    -- {
+    --     'joshdick/onedark.vim',
+    --     name = 'onedark',
+    --     config = function()
+    --         vim.cmd('colorscheme onedark')
+    --     end
+    -- },
 
     { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
 

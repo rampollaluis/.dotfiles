@@ -1,4 +1,5 @@
 require("rampollaluis.quickscope")
-require("rampollaluis.lazy")
 require("rampollaluis.set")
+require("rampollaluis.lazy")
 require("rampollaluis.remap")
+require("rampollaluis.catpuccin")
