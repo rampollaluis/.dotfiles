@@ -4,6 +4,17 @@
 <dict>
 	<key>customSites</key>
 	<dict>
+		<key>326944AF-2B4F-46E5-A7BE-C2A148485BFD</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>gmail</string>
+			<key>text</key>
+			<string>Open gmail</string>
+			<key>url</key>
+			<string>https://mail.google.com/</string>
+		</dict>
 		<key>396519D0-136D-4119-B78D-09DDCAAAEC49</key>
 		<dict>
 			<key>enabled</key>
@@ -17,6 +28,32 @@
 			<key>url</key>
 			<string>https://giphy.com/search/{query}</string>
 		</dict>
+		<key>3F0168C3-3761-497F-8B7E-0207E478A5AB</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>steamcharts</string>
+			<key>spaces</key>
+			<string>+</string>
+			<key>text</key>
+			<string>Search Steamcharts for {query}</string>
+			<key>url</key>
+			<string>https://steamcharts.com/search/?q={query}</string>
+		</dict>
+		<key>418F5D2A-194D-452A-9A89-A3F19BF7DC5F</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>letterboxd</string>
+			<key>spaces</key>
+			<string>+</string>
+			<key>text</key>
+			<string>Search letterboxd for {query}</string>
+			<key>url</key>
+			<string>https://letterboxd.com/search/{query}</string>
+		</dict>
 		<key>41FDC75A-C69A-4445-ABFB-C8942215ACCF</key>
 		<dict>
 			<key>enabled</key>
@@ -24,9 +61,22 @@
 			<key>keyword</key>
 			<string>urbandict</string>
 			<key>text</key>
-			<string>Urban Dictionary</string>
+			<string>Search Urban Dictionary for {query}</string>
 			<key>url</key>
 			<string>https://www.urbandictionary.com/define.php?term={query}</string>
+		</dict>
+		<key>43481F68-8786-404D-9B93-D63417D1FEBD</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>movie</string>
+			<key>spaces</key>
+			<string>+</string>
+			<key>text</key>
+			<string>Search letterboxd for {query}</string>
+			<key>url</key>
+			<string>https://letterboxd.com/search/{query}</string>
 		</dict>
 		<key>60B04C79-6A59-413B-BFB6-6E03CACF8A4D</key>
 		<dict>
@@ -40,6 +90,19 @@
 			<string>Mandarin Dictionary</string>
 			<key>url</key>
 			<string>https://www.mdbg.net/chinese/dictionary?page=worddict&amp;wdrst=0&amp;wdqb={query}</string>
+		</dict>
+		<key>66FB9C4D-5FC5-475B-9B03-6D068CC4501C</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>steam</string>
+			<key>spaces</key>
+			<string>+</string>
+			<key>text</key>
+			<string>Search Steam for {query}</string>
+			<key>url</key>
+			<string>https://store.steampowered.com/search/?term={query}</string>
 		</dict>
 	</dict>
 	<key>onlyShowEnabledInPrefs</key>
